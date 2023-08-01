@@ -29,7 +29,8 @@ func rMain() int {
 	var eof bool
 	var bLevel int
 	//giving it a position of a bracket it returns the corresponding bracket position
-	var jumpMap map[int]int
+	//var jumpMap map[int]int
+	var jumpMap []int
 	var instCount uint64
 
 	if *iFile != "" {
@@ -68,7 +69,8 @@ func rMain() int {
 
 	//generate jump map
 	//todo: optimize
-	jumpMap = make(map[int]int)
+	//jumpMap = make(map[int]int)
+	jumpMap = make([]int, len(inst))
 	{
 		for i := 0; i < len(inst); i++ {
 			switch inst[i] {
