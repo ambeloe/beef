@@ -167,9 +167,6 @@ func rMain() int {
 					}
 				}
 			}
-		case ' ', '\n':
-			instCount--
-			break
 		default:
 			_, _ = fmt.Fprintln(os.Stderr, "invalid instruction:", inst[ip])
 			return 1
